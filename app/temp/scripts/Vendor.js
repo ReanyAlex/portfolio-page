@@ -60,19 +60,12 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-<<<<<<< HEAD
-/******/ 	return __webpack_require__(__webpack_require__.s = 2);
-=======
 /******/ 	return __webpack_require__(__webpack_require__.s = 8);
->>>>>>> 67fdd49b51712afce5f15e7e336c90942763b368
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */,
 /* 1 */,
-<<<<<<< HEAD
-/* 2 */
-=======
 /* 2 */,
 /* 3 */,
 /* 4 */,
@@ -80,22 +73,11 @@
 /* 6 */,
 /* 7 */,
 /* 8 */
->>>>>>> 67fdd49b51712afce5f15e7e336c90942763b368
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-<<<<<<< HEAD
-__webpack_require__(3);
-
-__webpack_require__(4);
-
-__webpack_require__(5);
-
-/***/ }),
-/* 3 */
-=======
 __webpack_require__(9);
 
 __webpack_require__(10);
@@ -104,7 +86,6 @@ __webpack_require__(11);
 
 /***/ }),
 /* 9 */
->>>>>>> 67fdd49b51712afce5f15e7e336c90942763b368
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -114,11 +95,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 /*!
  * modernizr v3.5.0
-<<<<<<< HEAD
- * Build https://modernizr.com/download?-setclasses-dontmin
-=======
  * Build https://modernizr.com/download?-flexbox-setclasses-dontmin
->>>>>>> 67fdd49b51712afce5f15e7e336c90942763b368
  *
  * Copyright (c)
  *  Faruk Ates
@@ -340,8 +317,6 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
   ;
 
-<<<<<<< HEAD
-=======
   /**
    * If the browsers follow the spec, then they would expose vendor-specific styles as:
    *   elem.style.WebkitBorderRadius
@@ -911,7 +886,6 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
   Modernizr.addTest('flexbox', testAllProps('flexBasis', '1px', true));
 
->>>>>>> 67fdd49b51712afce5f15e7e336c90942763b368
   // Run each test
   testRunner();
 
@@ -933,11 +907,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 })(window, document);
 
 /***/ }),
-<<<<<<< HEAD
-/* 4 */
-=======
 /* 10 */
->>>>>>> 67fdd49b51712afce5f15e7e336c90942763b368
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_RESULT__;/*! picturefill - v3.0.2 - 2016-02-12
@@ -2488,11 +2458,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/*! picturefill - v3.0.2 - 2016-02-12
 
 
 /***/ }),
-<<<<<<< HEAD
-/* 5 */
-=======
 /* 11 */
->>>>>>> 67fdd49b51712afce5f15e7e336c90942763b368
 /***/ (function(module, exports) {
 
 (function(window, factory) {

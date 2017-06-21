@@ -1,10 +1,6 @@
 /*!
  * modernizr v3.5.0
-<<<<<<< HEAD
- * Build https://modernizr.com/download?-setclasses-dontmin
-=======
  * Build https://modernizr.com/download?-flexbox-setclasses-dontmin
->>>>>>> 67fdd49b51712afce5f15e7e336c90942763b368
  *
  * Copyright (c)
  *  Faruk Ates
@@ -236,8 +232,6 @@
 
   ;
 
-<<<<<<< HEAD
-=======
   /**
    * If the browsers follow the spec, then they would expose vendor-specific styles as:
    *   elem.style.WebkitBorderRadius
@@ -822,7 +816,6 @@ Detects support for the Flexible Box Layout model, a.k.a. Flexbox, which allows 
   Modernizr.addTest('flexbox', testAllProps('flexBasis', '1px', true));
 
 
->>>>>>> 67fdd49b51712afce5f15e7e336c90942763b368
   // Run each test
   testRunner();
 

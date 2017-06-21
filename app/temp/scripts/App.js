@@ -60,56 +60,13 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-<<<<<<< HEAD
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
-=======
 /******/ 	return __webpack_require__(__webpack_require__.s = 2);
->>>>>>> 67fdd49b51712afce5f15e7e336c90942763b368
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
-<<<<<<< HEAD
-"use strict";
-
-
-var _MobileMenu = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./modules/MobileMenu\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
-
-var _MobileMenu2 = _interopRequireDefault(_MobileMenu);
-
-var _RevealOnScroll = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./modules/RevealOnScroll\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
-
-var _RevealOnScroll2 = _interopRequireDefault(_RevealOnScroll);
-
-var _StickyHeader = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./modules/StickyHeader\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
-
-var _StickyHeader2 = _interopRequireDefault(_StickyHeader);
-
-var _Modal = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./modules/Modal\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
-
-var _Modal2 = _interopRequireDefault(_Modal);
-
-var _jquery = __webpack_require__(1);
-
-var _jquery2 = _interopRequireDefault(_jquery);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var mobileMenu = new _MobileMenu2.default();
-
-// new RevealOnScroll($(".feature-item"), "85%");
-// new RevealOnScroll($(".testimonial"), "60%");
-var stickyHeader = new _StickyHeader2.default();
-var modal = new _Modal2.default();
-
-/***/ }),
-/* 1 */
-/***/ (function(module, exports, __webpack_require__) {
-
-=======
->>>>>>> 67fdd49b51712afce5f15e7e336c90942763b368
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
  * jQuery JavaScript Library v3.2.1
  * https://jquery.com/
@@ -10366,8 +10323,6 @@ return jQuery;
 } );
 
 
-<<<<<<< HEAD
-=======
 /***/ }),
 /* 1 */
 /***/ (function(module, exports) {
@@ -11825,6 +11780,5 @@ var Modal = function () {
 
 exports.default = Modal;
 
->>>>>>> 67fdd49b51712afce5f15e7e336c90942763b368
 /***/ })
 /******/ ]);
