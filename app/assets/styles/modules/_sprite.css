@@ -1,0 +1,50 @@
+  .icon{
+    background-image:url('../../assets/images/sprites/sprite-db36c0d9.svg');
+  }
+
+  .no-svg .icon{
+    background-image:url('../../assets/images/sprites/sprite-db36c0d9.png');
+  }
+
+
+  .icon--amazon{
+    width: 66px;
+    height: 66px;
+    background-position: 0 0;
+  }
+
+  .icon--facebook{
+    width: 66px;
+    height: 66px;
+    background-position: 50% 0;
+  }
+
+  .icon--github{
+    width: 66px;
+    height: 66px;
+    background-position: 0 50%;
+  }
+
+  .icon--instagram{
+    width: 66px;
+    height: 66px;
+    background-position: 50% 50%;
+  }
+
+  .icon--linked-in{
+    width: 66px;
+    height: 66px;
+    background-position: 100% 0;
+  }
+
+  .icon--treehouse{
+    width: 66px;
+    height: 66px;
+    background-position: 100% 50%;
+  }
+
+  .icon--twitter{
+    width: 66px;
+    height: 66px;
+    background-position: 0 100%;
+  }

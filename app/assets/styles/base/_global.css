@@ -4,7 +4,7 @@
 
 body{
   font-family: "Roboto", sans-serif;
-  color: #333;
+  color: $darkSlate;
 }
 
 img{
@@ -13,5 +13,14 @@ img{
 }
 
 a{
-  color: $mainOrange;
+  color: $lightSteelBlue;
+}
+
+a:hover{
+  color: $slateGray;
+}
+
+iframe {
+    /*display:block;*/
+    background: white;
 }
