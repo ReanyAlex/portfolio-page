@@ -11109,6 +11109,10 @@ var _Modal = __webpack_require__(7);
 
 var _Modal2 = _interopRequireDefault(_Modal);
 
+var _Konami = __webpack_require__(8);
+
+var _Konami2 = _interopRequireDefault(_Konami);
+
 var _jquery = __webpack_require__(0);
 
 var _jquery2 = _interopRequireDefault(_jquery);
@@ -11119,8 +11123,67 @@ var mobileMenu = new _MobileMenu2.default();
 
 // new RevealOnScroll($(".feature-item"), "85%");
 // new RevealOnScroll($(".testimonial"), "60%");
+
+// import Canvas from './modules/Canvas';
 var stickyHeader = new _StickyHeader2.default();
 var modal = new _Modal2.default();
+var konami = new _Konami2.default();
+// let canvas = new Canvas();
+
+var canvas = document.querySelector('#draw');
+var ctx = canvas.getContext('2d');
+canvas.width = window.innerWidth;
+canvas.height = 1000;
+ctx.strokeStyle = '#BADA55';
+ctx.lineJoin = 'round';
+ctx.lineCap = 'round';
+ctx.lineWidth = 60;
+
+var isDrawing = false;
+var lastX = 0;
+var lastY = 0;
+var hue = 0;
+var direction = true;
+
+function draw(e) {
+  //stops function from drawing when isDrawingis false
+  if (!isDrawing) return;
+  ctx.strokeStyle = 'hsl(' + hue + ',100%, 50%)';
+  ctx.beginPath();
+  ctx.moveTo(lastX, lastY);
+  ctx.lineTo(e.offsetX, e.offsetY);
+  ctx.stroke();
+  var _ref = [e.offsetX, e.offsetY];
+  lastX = _ref[0];
+  lastY = _ref[1];
+
+  hue++;
+  if (ctx.lineWidth >= 75 || ctx.lineWidth <= 50) {
+    console.log(ctx.lineWidth);
+    direction = !direction;
+  }
+
+  if (direction) {
+    ctx.lineWidth++;
+  } else {
+    ctx.lineWidth--;
+  }
+}
+
+canvas.addEventListener('mousedown', function (e) {
+  isDrawing = true;
+  var _ref2 = [e.offsetX, e.offsetY];
+  lastX = _ref2[0];
+  lastY = _ref2[1];
+});
+
+canvas.addEventListener('mousemove', draw);
+canvas.addEventListener('mouseup', function () {
+  return isDrawing = false;
+});
+canvas.addEventListener('mouseout', function () {
+  return isDrawing = false;
+});
 
 /***/ }),
 /* 3 */
@@ -11779,6 +11842,79 @@ var Modal = function () {
 }();
 
 exports.default = Modal;
+
+/***/ }),
+/* 8 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Konami = function () {
+  function Konami() {
+    _classCallCheck(this, Konami);
+
+    this.pressed = [];
+    this.secretCode = 'ArrowUpArrowUpArrowDownArrowDownArrowLeftArrowRightArrowLeftArrowRightba';
+    this.modalSecret = (0, _jquery2.default)('.modal-secret');
+    this.closeModalButton = (0, _jquery2.default)('.modal-secret__close');
+    this.events();
+    this.on = true;
+  }
+
+  _createClass(Konami, [{
+    key: 'events',
+    value: function events() {
+      var _this = this;
+
+      window.addEventListener('keyup', function (e) {
+        _this.pressed.push(e.key);
+        _this.pressed.splice(-_this.secretCode.length - 1, _this.pressed.length - _this.secretCode.length);
+        console.log(e);
+
+        if (e.keyCode == 27) {
+          _this.modalSecret.removeClass("modal-secret--is-visible");
+          return false;
+        }
+
+        if (_this.on) {
+          if (_this.pressed.join("").includes(_this.secretCode)) {
+            _this.modalSecret.addClass("modal-secret--is-visible");
+            _this.on = false;
+            console.log("DING DING");
+
+            return false;
+          }
+        }
+      });
+
+      this.closeModalButton.click(this.closeModalSecret.bind(this));
+    }
+  }, {
+    key: 'closeModalSecret',
+    value: function closeModalSecret() {
+      this.modalSecret.removeClass("modal-secret--is-visible");
+    }
+  }]);
+
+  return Konami;
+}();
+
+exports.default = Konami;
 
 /***/ })
 /******/ ]);
